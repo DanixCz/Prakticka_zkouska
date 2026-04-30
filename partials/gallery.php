@@ -1,7 +1,5 @@
-<!-- GALLERY SECTION: slide show galerie -->
 <section id="gallery-section" class="section-panel gallery-section">
     <h2>Ukázka naší práce</h2>
-    <!-- Galerie obsahuje snímky a šipky pro přepínání obrázků -->
     <div class="gallery-wrapper" aria-label="Galerie obrázků" role="region">
         <div class="gallery-slide active">
             <img src="\images\image2.png" alt="Ukázková fotografie 1" />

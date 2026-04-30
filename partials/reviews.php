@@ -43,16 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- REVIEWS SECTION: formulář a přehled odeslaných recenzí -->
 <section id="reviews-section" class="section-panel reviews-section">
     <h2>Recenze a zpětná vazba</h2>
-    <p>Toto je samostatná část s formulářem a zobrazením odeslaných recenzí.</p>
     <div class="reviews-layout">
-        <!-- Formulář, který odesílá data do PHP backendu pro uložení do databáze -->
         <form id="mainForm" action="" method="POST">
             <div class="field-row">
                 <div class="field-group">
-                    <label for="nameInput">Jméno (přezdívka):</label>
+                    <label for="nameInput">Jméno:</label>
                     <input id="nameInput" name="Name" required type="text" />
                 </div>
                 <div class="field-group">
@@ -62,13 +59,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="field-group">
-                <label for="gameInput">Název hry:</label>
+                <label for="gameInput">typ produktu:</label>
                 <input id="gameInput" name="game" required type="text" />
             </div>
 
             <div class="field-group">
                 <span class="rating-label">Hodnocení:</span>
-                <!-- Hodnocení pomocí vlastních radio tlačítek, uložených jako číslo 1-5 -->
                 <div class="rating-group" role="radiogroup" aria-label="Hodnocení">
                     <input type="radio" id="rating5" name="rating" value="5" />
                     <label for="rating5" aria-label="5 bodů"></label>
@@ -97,7 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="slider-panel">
         <h2>Poslední recenze</h2>
-        <!-- Výpis posledních recenzí načtených z databáze -->
         <div id="submissions" aria-live="polite">
             <?php
             $res = mysqli_query($conn, "SELECT id,name,address,email,game,rating,created_at FROM submissions ORDER BY created_at DESC");
@@ -105,11 +100,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 while ($row = mysqli_fetch_assoc($res)) {
                     echo '<div class="submitted">';
                     echo '<div class="cloned-form">';
-                    echo '<label>Jméno (přezdívka):</label>';
+                    echo '<label>Jméno:</label>';
                     echo '<input type="text" value="' . htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . '" disabled />';
                     echo '<label>Email:</label>';
                     echo '<input type="text" value="' . htmlspecialchars($row['email'], ENT_QUOTES, 'UTF-8') . '" disabled />';
-                    echo '<label>Název hry:</label>';
+                    echo '<label>typ produktu:</label>';
                     echo '<input type="text" value="' . htmlspecialchars($row['game'], ENT_QUOTES, 'UTF-8') . '" disabled />';
                     echo '<label>Hodnocení:</label>';
                     echo '<div class="rating-display">';

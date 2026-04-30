@@ -60,44 +60,12 @@ if ($result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Komponenty pro maturitu</title>
+    <title>Praktická zkouška</title>
 </head>
 <body>
-    <header>
-    <div class="wrapper">
-        <div class="wrapper-logo">
-            <div class="logo-mark">M</div>
-            <div class="logo-text">
-                <strong>Maturita</strong>
-                <span>Komponenty</span>
-            </div>
-        </div>
-        <div class="wrapper-hamburger" aria-label="Otevřít menu" role="button" tabindex="0">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <!-- Navigační odkazy pro rychlý přesun na jednotlivé sekce stránky -->
-    <nav>
-        <a href="#hero-section">Domů</a>
-        <a href="#gallery-section">Galerie</a>
-        <a href="#grid-section">Grid</a>
-        <a href="#reviews-section">Recenze</a>
-    </nav>
-</header>
-<section class="hero-section" id="hero-section">
-    <div class="hero-content">
-        <h1>Kovářství Černý</h1>
-        <p>Tato stránka obsahuje samostatné bloky, které lze snadno použít pro maturitní prezentaci.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quod vitae dolores.</p>
-        <div class="hero-actions">
-            <a href="#" class="button button-primary">Galerie</a>
-            <a href="#" class="button button-secondary">Grid</a>
-        </div>
-    </div>
+    <?php include __DIR__ . '/partials/header.php'; ?>
+    <?php include __DIR__ . '/partials/hero.php'; ?>
 
-</section>
     <main>
         <div class="center">
             <?php include __DIR__ . '/partials/grid.php'; ?>

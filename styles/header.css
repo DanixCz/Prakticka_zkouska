@@ -33,7 +33,9 @@ header .logo-mark {
     height: 50px;
     border-radius: 18px;
     background: linear-gradient(135deg, #e55c20 0%, #950700 100%);
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     place-items: center;
     color: #fff;
     font-weight: 800;
@@ -137,7 +139,7 @@ header nav a {
         box-shadow: none;
     }
     header nav a:hover {
-        color: #950700;
+        color: #e55c20;
     }
 }
 

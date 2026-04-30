@@ -3,8 +3,35 @@
     padding: 24px 28px;
     background: #0f172a;
     color: #fff;
-    text-align: center;
-    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.feet{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 145px;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.sekce{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+
+    a{
+        color: rgb(131, 170, 255);
+    }
+    a:hover{
+        color: rgb(23, 96, 255);
+        text-decoration: underline;
+    }
 }
 
 .footer-content{
@@ -16,4 +43,23 @@
     gap: 10px;
     font-size: 0.95rem;
     color: rgba(255,255,255,0.88);
+}
+
+#social{
+    flex-direction: row;
+    gap: 15px;
+}
+
+svg{
+    height: 35px;
+    width: 35px;
+}
+
+@media (max-width: 760px){
+    .feet{
+    flex-direction: column;
+    gap: 30px;
+
+}
+
 }
