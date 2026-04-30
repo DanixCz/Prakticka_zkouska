@@ -2,11 +2,7 @@
 <header>
     <div class="wrapper">
         <div class="wrapper-logo">
-            <div class="logo-mark">M</div>
-            <div class="logo-text">
-                <strong>Maturita</strong>
-                <span>Komponenty</span>
-            </div>
+            <div class="logo-mark">⚒</div>
         </div>
         <div class="wrapper-hamburger" aria-label="Otevřít menu" role="button" tabindex="0">
             <span></span>

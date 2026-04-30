@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Databáze: `test_formular`
+-- Databáze: `Prakticka_maturita`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,6 @@ CREATE TABLE `submissions` (
   `NAME` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `game` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rating` tinyint unsigned NOT NULL DEFAULT 0,
   `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

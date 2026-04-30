@@ -71,7 +71,7 @@ form{
 .rating-group label:hover ~ label,
 .rating-group input[type="radio"]:checked ~ label,
 .rating-group input[type="radio"]:checked ~ label ~ label{
-    background: #2563eb;
+    background: #e55c20;
 }
 
 .rating-group label:hover,
@@ -109,7 +109,7 @@ textarea{ min-height: 110px; resize: vertical; }
 
 input[type="submit"]{
     padding: 10px 16px;
-    background: #2563eb;
+    background: #e55c20;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -118,7 +118,7 @@ input[type="submit"]{
     transition: background .12s ease;
 }
 
-input[type="submit"]:hover{ background: #1e40af; }
+input[type="submit"]:hover{ background: #950700; }
 
 button[type="button"]{
     padding: 10px 16px;
@@ -152,8 +152,8 @@ button[type="button"]:hover{
 }
 
 .rating-dot.filled{
-    background: #2563eb;
-    border-color: #2563eb;
+    background: #e55c20;
+    border-color: #e55c20;
 }
 
 .submitted{

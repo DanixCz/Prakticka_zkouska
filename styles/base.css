@@ -34,13 +34,10 @@ main{
 }
 
 .section-panel h2{
+    display: flex;
+    justify-content: center;
     margin-top: 0;
     font-size: 1.55rem;
-}
-
-.section-panel p{
-    margin: 10px 0 18px;
-    color: #475569;
 }
 
 .button{
@@ -60,12 +57,25 @@ main{
 }
 
 .button-secondary{
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0);
     color: #fff;
     border: 1px solid rgba(255,255,255,0.3);
 }
 
 .button:hover{ transform: translateY(-1px); }
+
+.button-secondary:hover{
+    background: rgb(255, 255, 255);
+    color: #000000;
+}
+
+
+@media (min-width: 760px){
+    .button{
+        width: 150px;
+
+    }
+}
 
 @media (max-width: 760px){
     .button{

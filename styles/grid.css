@@ -8,27 +8,79 @@
     margin-top: 18px;
 }
 
-.card{
-    background: #fff;
+.gallery{
+    width: 100%;
+    height: 100%;
+}
+
+.karta1{
+    background-image: url('/images/image5.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.karta1:hover{
+    transition: ease 0.5s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(/images/image5.png);
+}
+
+.karta2{
+    background-image: url('/images/image6.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.karta2:hover{
+    transition: ease 0.5s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(/images/image6.png);
+}
+
+.karta3{
+    background-image: url('/images/image7.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.karta3:hover{
+    transition: ease 0.5s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(/images/image7.png);
+}
+
+.popisek{
+    margin: 0px;
+    color: #e2e8f000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-size: 22px;
+}
+
+.popisek:hover{
+    transition: ease 0.5s;   
+    color: white;
+}
+
+#card{
+    cursor:pointer;
     border: 1px solid #e2e8f0;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
     border-radius: 18px;
-    padding: 22px;
     box-shadow: 0 12px 30px rgba(15,23,42,0.06);
 }
 
-.card h3{
+#card h3{
     margin: 0 0 10px;
     font-size: 1.1rem;
 }
 
-.badge{
-    display: inline-flex;
-    margin-bottom: 14px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: #eff6ff;
-    color: #1d4ed8;
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
-    font-weight: 700;
+@media (max-width: 760px){
+    #card{
+    width: 250px;
+    height: 300px;
+    
+}
 }
