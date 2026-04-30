@@ -1,0 +1,152 @@
+header {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: rgba(0,0,0,0.08) 0px 4px 12px;
+    background-color: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+}
+
+header .wrapper {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #fff;
+    z-index: 10;
+    position: relative;
+}
+
+header .wrapper-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .logo-mark {
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-size: 1.25rem;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+}
+
+header .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+header .logo-text strong {
+    font-size: 0.95rem;
+    color: #111827;
+}
+
+header .logo-text span {
+    font-size: 0.75rem;
+    color: #64748b;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+header .wrapper-hamburger {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform ease 1s;
+}
+
+header .wrapper-hamburger span {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transition: transform ease 1s, opacity ease 1s;
+}
+
+@media only screen and (min-width: 768px) {
+    header .wrapper-hamburger {
+        display: none;
+    }
+}
+
+header .wrapper .is-active {
+    transform: rotate(360deg);
+}
+
+header .wrapper .is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 13px);
+}
+
+header .wrapper .is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+header .wrapper .is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -13px);
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-350px);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    transition: transform ease 1s;
+    background: #fff;
+}
+
+header nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: ease 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+    header nav {
+        z-index: 10;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 60px;
+        transform: translate(-50%, -150%);
+        max-width: 1300px;
+        background: none;
+        box-shadow: none;
+    }
+    header nav a:hover {
+        color: #f00;
+    }
+}
+
+header .is-open {
+    transform: translateX(-50%) translateY(0px);
+}
+
+@media (max-width: 760px){
+    header .wrapper{
+        padding: 0 18px;
+    }
+}
